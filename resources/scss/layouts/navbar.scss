@@ -3,12 +3,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    min-height: 120px;
-    height: 120px;
+    min-height: 115px;
+    height: 115px;
     transition: height .5s;
 
     &.extend {
-        height: 325px;
+        height: 285px;
     }
 
     .navbar_container {
@@ -71,14 +71,16 @@
             }
         }
         .navbar_burger_content {
+            margin-top: 12px;
             width: 100%;
             height: 100%;
-            margin-top: 12px;
             display: flex;
             flex-direction: column;
-            justify-content: space-evenly;
+            border-radius: 6px;
+            gap: 8px;
             a {
-                height: 60px;
+                width: 100%;
+                height: 40px;
                 vertical-align: center;
                 display: flex;
                 align-items: center;

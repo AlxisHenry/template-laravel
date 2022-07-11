@@ -1,0 +1,14 @@
+.layout {
+    .container {
+        display: flex;
+        gap: 20px;
+        div {
+            &.container-text {
+
+            }
+            img {
+                max-width: 600px;
+            }
+        }
+    }
+}
