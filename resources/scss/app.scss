@@ -2,6 +2,22 @@
 // ===================
 
 $black: #06070B;
+$white: #F2F2F2;
+$modern_blue: #3a48c0;
+$backgroundColor: $white;
+$palanquin: 'Palanquin', sans-serif;
+$palanquin_dark: 'Palanquin Dark', sans-serif;
+
+// Custom Variables
+// ===================
+
+$example: #000;
+$DarkBlue: #242B40;
+$Blue: #1B208C;
+$FlashBlue: #52B3D9;
+$MoyBlue: #464AA6;
+$LightBlue: #787CBF;
+$LinkColor: #6c757d;
 
 // Tools
 // ===================
@@ -14,6 +30,15 @@ $black: #06070B;
 @import 'modules/base';
 @import 'modules/spacing';
 
+// Layouts
+// ===================
+@import 'layouts/navbar';
+@import 'layouts/footer';
+
 // Components
 // ===================
+@import 'components/btn-primary';
 
+// Templates
+// ===================
+@import 'templates/home';

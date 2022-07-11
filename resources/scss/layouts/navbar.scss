@@ -1,0 +1,112 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 120px;
+    height: 120px;
+    transition: height .5s;
+
+    &.extend {
+        height: 325px;
+    }
+
+    .navbar_container {
+        border-bottom: solid 1px $modern_blue;
+        width: 90%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+
+        .navbar_content {
+            margin-top: 20px;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-self: flex-start;
+            align-items: center;
+            justify-content: space-between;
+
+            div:not(.btn-primary) {
+                min-height: 84px;
+            }
+
+            .navbar_title {
+                display: flex;
+                align-items: center;
+
+                span.main {
+                    font-family: $palanquin_dark;
+                    font-size: 50px;
+                }
+
+                span.secondary {
+                    font-family: $palanquin;
+                    font-weight: 400;
+                }
+            }
+
+            .contain_navbar_redirections {
+                display: flex;
+                align-items: center;
+                gap: 50px;
+
+                .navbar_redirections {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                div:not(.navbar_redirections) {
+                    margin-right: 8px;
+                }
+
+            }
+
+            .navbar_burger {
+                display: none;
+                align-items: center;
+                font-size: 40px;
+            }
+        }
+        .navbar_burger_content {
+            width: 100%;
+            height: 100%;
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            a {
+                height: 60px;
+                vertical-align: center;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+    .navbar .navbar_container .contain_navbar_redirections {
+        display: none!important;
+    }
+    .navbar .navbar_container .navbar_burger {
+        display: flex!important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar .navbar_container .navbar_title .secondary {
+        display: none!important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar .navbar_container .navbar_title .main {
+        font-size: 36px!important;
+        margin-bottom: 0;
+    }
+}

@@ -7,17 +7,17 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="description" content="Portfolio Henry Alexis BTS SIO Web Developer"/>
+    <meta name="description" content=""/>
     <meta name="keywords" content=""/>
     <meta name="googlebot" content="index,follow,nosnippet"/>
     <meta name="robots" content="index, follow"/>
     <meta name="copyright" content="" />
     <meta property="og:type" content="portfolio"/>
-    <meta property="og:title" content="@yield('og:title')"/>
+    <meta property="og:title" content=""/>
     <meta property="og:image" content=""/>
     <meta property="og:url" content="{{ Request::url() }}"/>
     <meta property="og:site_name" content="">
-    <meta property="og:description" content="@yield('og:description')"/>
+    <meta property="og:description" content=""/>
     <meta property="og:video" content="">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="fr_FR">

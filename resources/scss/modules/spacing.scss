@@ -1,0 +1,16 @@
+$space: 8px;
+
+@each $i in 1,2,3,4 {
+    .mb-#{$i} {
+        margin-bottom: $i * $space;
+    }
+    .mt-#{$i} {
+        margin-top: $i * $space;
+    }
+    .ml-#{$i} {
+        margin-left: $i * $space;
+    }
+    .mr-#{$i} {
+        margin-right: $i * $space;
+    }
+}

@@ -1,6 +1,31 @@
 body, html {
     line-height: 1.4;
-    font-size: 24px;
+    font-size: 28px;
     color: $black;
 }
 
+body {
+    background-color: $backgroundColor;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    font-family: $palanquin;
+    font-weight: 400;
+    user-select: none;
+    &.underlined {
+        background-repeat: no-repeat;
+        background-size: 0 100%;
+        background-position: left 0 bottom 0;
+        transition: background-size .4s;
+        background-image: linear-gradient(transparent calc(100% - 3px), $black calc(100% - 2px), $black 100%);
+        &:hover, &:active {
+            background-size: 100% 100%;
+        }
+    }
+}
+
+i:hover {
+    cursor: pointer;
+}
