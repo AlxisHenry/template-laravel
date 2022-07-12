@@ -31,6 +31,28 @@ a {
     }
 }
 
+mark {
+    background-color: transparent;
+    position: relative;
+}
+
+mark::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-10%);
+    opacity: 0.7;
+    height: 12px;
+    left: -3px;
+    right: -3px;
+    bottom: 0;
+    z-index: -1;
+    border-radius: 4px;
+    display: inline-block;
+    background-color: $shine;
+    font-weight: 600;
+}
+
 i:hover {
     cursor: pointer;
 }

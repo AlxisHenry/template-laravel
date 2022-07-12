@@ -18,9 +18,9 @@
         </div>
 
         <div class="navbar_burger_content">
-            <a href="/project" tabindex="-1" class="hover-effec">Project</a>
-            <a target="_blank" tabindex="-1" class="hover-effec" href="https://github.com/AlxisHenry/alexishenry.eu">Github</a>
-            <a href="/login" tabindex="-1" class="hover-effec">Sign-in</a>
+            <a href="/project" tabindex="-1" class="hover-effect">Project</a>
+            <a target="_blank" tabindex="-1" class="hover-effect" href="https://github.com/AlxisHenry/alexishenry.eu">Github</a>
+            <a href="/login" tabindex="-1" class="hover-effect">Sign-in</a>
         </div>
 
     </div>
