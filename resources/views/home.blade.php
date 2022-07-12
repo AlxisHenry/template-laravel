@@ -20,6 +20,10 @@
 
     </section>
 
+    <section class="layout project-layout">
+
+    </section>
+
 @endsection
 
 @section('scripts')
