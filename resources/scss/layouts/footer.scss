@@ -1,41 +1,176 @@
 footer {
-    box-shadow: 0 -1px 6px 4px rgb(0 0 0 / 10%);
-    height: 400px;
+    height: auto;
+    min-height: 425px;
     width: 100%;
-    background-color: $modern_blue;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
+    gap: 18px;
 
+    background-color: $modern_blue;
     color: $white;
     font-family: $palanquin;
     font-size: 20px;
     font-weight: 500;
 
-    .footer_top {
-        height: 100%;
-        width: 100%;
+    .footer_high {
+        min-height: 80px;
+        margin-top: 20px;
+        flex: 1;
         display: flex;
         flex-direction: row;
-        div {
-            width: 100%;
+        align-items: center;
+        height: 100px;
+        width: 90%;
+        gap: 12px;
+        .footer_logo {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 60px;
+            }
+        }
+        .footer_society_name {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 1.125rem;
+            font-weight: 600;
+        }
+    }
+
+    .footer_mid {
+        min-height: 220px;
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+
+        .footer_navigation {
+            flex: 3;
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            div {
+                ul {
+                    li {
+                        &.title {
+                            font-size: 30px;
+                            font-weight: 600;
+                            font-family: $palanquin;
+                        }
+                        &:not(.title) {
+                        }
+                    }
+                }
+            }
+        }
+
+        newsletter {
             height: 100%;
             display: flex;
             flex-direction: column;
-        }
-        .footer_left {
-        }
+            gap: 50px;
+            margin-bottom: 30px;
+            .form-group {
+                margin-top: 20px;
+                gap: 35px;
+            }
+            .switch_color_theme {
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                gap: 12px;
+                span {
+                    font-weight: 600;
+                    font-family: $palanquin;
+                }
+                .switch {
+                    position: relative;
+                    display: inline-block;
+                    width: 60px;
+                    height: 34px;
+                }
 
-        .footer_right {
+                /* Hide default HTML checkbox */
+                .switch input {
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+
+                /* The slider */
+                .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #ccc;
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+                }
+
+                .slider:before {
+                    position: absolute;
+                    content: "";
+                    height: 40px;
+                    width: 40px;
+                    left: 0px;
+                    bottom: 4px;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto 0;
+                    -webkit-transition: 0.4s;
+                    transition: 0.4s;
+                    box-shadow: 0 0px 15px #2020203d;
+                    background: white url('https://i.ibb.co/FxzBYR9/night.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                input:checked + .slider {
+                    background-color: #2196f3;
+                }
+
+                input:focus + .slider {
+                    box-shadow: 0 0 1px #2196f3;
+                }
+
+                input:checked + .slider:before {
+                    -webkit-transform: translateX(24px);
+                    -ms-transform: translateX(24px);
+                    transform: translateX(24px);
+                    background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                /* Rounded sliders */
+                .slider.round {
+                    border-radius: 34px;
+                }
+
+                .slider.round:before {
+                    border-radius: 50%;
+                }
+            }
+            flex: 1;
         }
     }
 
     .footer_bottom {
+        flex: 1;
+        min-height: 100px;
         border-top: solid 1px $white;
-        height: 125px;
+        height: 100px;
         width: 90%;
         display: flex;
+        align-items: center;
         span {
             width: 50%;
             height: 100%;
@@ -50,8 +185,45 @@ footer {
 }
 
 
-@media screen and (max-width: 1200px) {
-    footer .footer_top {
+@media screen and (max-width: 980px) {
+    footer .footer_bottom {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+
+        span {
+            font-size: 15px;
+            text-align: justify;
+            width: 70%;
+            justify-content: center !important;
+        }
+
+        .legal_notice {
+        }
+
+        .social-networks {
+            width: 100%;
+        }
+    }
+    footer .footer_mid {
+        .footer_navigation {
+            justify-content: end;
+        }
+
+        .footer_resources {
+            justify-content: center;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    footer .footer_bottom {
+        .legal_notice{
+            display: none;
+        }
+    }
+    footer .footer_mid {
         flex-direction: column;
     }
 }

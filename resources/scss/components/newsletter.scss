@@ -1,17 +1,17 @@
-form {
-    display: flex;
-    flex-direction: column;
+form.newsletter {
     .form-group {
         display: flex;
         flex-direction: column;
-        .form-email-confirm {
+        label {
+            font-weight: 700!important;
+        }
+        .form-confirm {
             position: relative;
-            max-width: 360px;
-            max-height: 40px;
+            max-width: 340px!important;
+            max-height: 40px!important;
             display: flex;
-            justify-content: center;
             input {
-                box-shadow: 0 0 1px .5px $black;
+                min-height: 40px;
                 background-clip: padding-box;
                 background-color: $white;
                 border: 1px solid #ced4da;
@@ -22,7 +22,7 @@ form {
                 line-height: 1.5;
                 transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
                 width: 100%;
-                font-size: 22px;
+                font-size: 16px!important;
                 font-family: $palanquin;
             }
             button {
@@ -35,7 +35,8 @@ form {
                 position: absolute;
                 width: 35px;
                 height: 35px;
-                right: 0;
+                top: 12.5%;
+                right: 6px;
                 &:hover {
                     cursor: pointer;
                 }
