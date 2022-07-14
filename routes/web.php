@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController;
+use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\LoginController;
 
 // Add custom routes below
 
-Route::get('/', [MainController::class, 'main'])->name('homepage');
-Route::get('/login', [MainController::class, 'main'])->name('login');
+Route::get('/', [HomepageController::class, 'homepage'])->name('home');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
