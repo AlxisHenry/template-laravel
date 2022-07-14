@@ -3,7 +3,10 @@
     <div class="navbar_container">
         <div class="navbar_content">
             <div class="navbar_title">
-                <span class="main mb-2">CCI Campus</span>&nbsp;<span class="secondary">web application</span>
+                <a href="/">
+                    <span class="main mb-2">CCI Campus</span>
+                </a>&nbsp;
+                <span class="secondary">web application</span>
             </div>
             <div class="contain_navbar_redirections">
                 <div class="navbar_redirections">

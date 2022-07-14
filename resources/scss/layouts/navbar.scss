@@ -36,9 +36,12 @@
                 display: flex;
                 align-items: center;
 
-                span.main {
-                    font-family: $palanquin_dark;
-                    font-size: 50px;
+                a {
+                    margin-top: -12px;
+                    span.main {
+                        font-family: $palanquin_dark;
+                        font-size: 50px;
+                    }
                 }
 
                 span.secondary {
