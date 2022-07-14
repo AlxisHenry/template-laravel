@@ -20,7 +20,19 @@
 
     </section>
 
-    <section class="layout project-layout">
+    <section class="layout homepage-layout">
+
+        <div class="container">
+
+            <div class="container-asset">
+                <img src="{{ url('assets/svg/stats.svg') }}" alt="">
+            </div>
+            <div class="container-text">
+                Improve your statistics,<br>
+                <span>Its our <mark>Job</mark>.</span>
+            </div>
+
+        </div>
 
     </section>
 
