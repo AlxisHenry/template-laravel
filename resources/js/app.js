@@ -1,5 +1,4 @@
 import './bootstrap';
-import '../scss/app.scss'
 
 const Burger = document.querySelector('.navbar_burger')
 const NavbarContainer = document.querySelector('.navbar')

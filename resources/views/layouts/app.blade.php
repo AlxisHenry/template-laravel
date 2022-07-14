@@ -33,6 +33,7 @@
     <link rel="manifest" href="{{ url('assets/icons/site.webmanifest') }}">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    @vite('resources/scss/app.scss')
 </head>
 <body>
 
@@ -42,6 +43,7 @@
 
     @include('layouts.footer')
 
+    @vite('resources/js/app.js')
     @yield('scripts')
 
 </body>
