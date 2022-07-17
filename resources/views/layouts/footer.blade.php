@@ -40,7 +40,7 @@
         </newsletter>
 
         <div class="footer_navigation">
-            <div class="ml-2">
+            <div class="ml-4">
                 <ul>
                     <li class="title mb-3">Navigation</li>
                     <li class="mb-2"><a href="">Project</a></li>
