@@ -1,0 +1,104 @@
+section.auth-section {
+    margin-bottom: 200px;
+    .auth-container {
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        min-width: 300px;
+        gap: 40px;
+        h1 {
+            width: 50%;
+            min-width: 300px;
+            font-weight: 400;
+            font-size: 38px!important;
+            span {
+                font-weight: 800;
+                color: $modern_blue;
+            }
+        }
+        form {
+            width: 50%;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 25px;
+            .stay_logged {
+                margin-top: -25px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                input[type="checkbox"] {
+                    width: 12px;
+                }
+                label {
+                    font-size: 14px;
+                }
+            }
+            .form-group {
+                width: 100%;
+                display: flex;
+                .form-icon {
+                    flex: .5;
+                    height: 80px;
+                    width: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #ced4da;
+                    border-radius: .125rem 0 0 .125rem;
+                    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                    i {
+                        font-size: 20px;
+                        color: $modern_blue;
+                    }
+                }
+                input {
+                    border-radius: 0 .125rem .125rem 0 ;
+                    flex: 3;
+                    height: 80px;
+                    width: 100%;
+                    padding: 0 15px;
+                    &[type='submit'] {
+                        transition: All 300ms ease-in;
+                        color: $black;
+                        font-family: $palanquin;
+                        font-weight: 600;
+                        font-size: 24px!important;
+                        text-transform: uppercase;
+                        background-color: $modern_blue;
+                        color: $white;
+                        &:hover {
+                            transition: All 225ms ease-in;
+                            background-color: $white;
+                            border: solid 3px $modern_blue;
+                            color: $modern_blue;
+                            cursor: pointer;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            .reset_password {
+                margin-top: -20px;
+                width: 100%;
+                text-align: end;
+                font-size: 14px;
+            }
+            .redirect_case {
+                width: 100%;
+                p {
+                    font-size: 14px;
+                    a {
+                        font-weight: 600;
+                        color: $modern_blue;
+                    }
+                }
+            }
+        }
+    }
+}
