@@ -3,9 +3,9 @@
         <div class="navbar_content">
             <div class="navbar_title">
                 <a href="/">
-                    <span class="main mb-2">CCI Campus</span>
+                    <p class="main mb-2">CCI Campus</p>
                 </a>&nbsp;
-                <span class="secondary">web application</span>
+                <p class="secondary">web application</p>
             </div>
             <div class="contain_navbar_redirections">
                 <div class="navbar_redirections">

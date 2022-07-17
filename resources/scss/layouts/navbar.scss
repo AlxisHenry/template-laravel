@@ -37,14 +37,16 @@
                 align-items: center;
 
                 a {
-                    margin-top: -12px;
-                    span.main {
+                    p.main {
                         font-family: $palanquin_dark;
                         font-size: 50px;
+                        &::first-line {
+                            color: $modern_blue;
+                        }
                     }
                 }
 
-                span.secondary {
+                p.secondary {
                     font-family: $palanquin;
                     font-weight: 400;
                 }
