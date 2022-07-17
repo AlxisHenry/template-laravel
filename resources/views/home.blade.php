@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Homepage title')
+@section('title', $title)
 
 @section('body')
 
-    <section class="layout homepage-layout">
+    <section class="layout homepage-layout first-layout">
 
         <div class="container">
 
@@ -20,7 +20,7 @@
 
     </section>
 
-    <section class="layout homepage-layout">
+    <section class="layout homepage-layout secondary-layout">
 
         <div class="container">
 
