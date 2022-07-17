@@ -11,19 +11,8 @@ form.newsletter {
             max-height: 40px!important;
             display: flex;
             input {
-                min-height: 40px;
-                background-clip: padding-box;
-                background-color: $white;
-                border: 1px solid #ced4da;
-                border-radius: 0.125rem;
-                color: #495057;
-                display: block;
                 height: 100%;
-                line-height: 1.5;
-                transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
                 width: 100%;
-                font-size: 16px!important;
-                font-family: $palanquin;
             }
             button {
                 border-radius: 0.125rem;
@@ -35,8 +24,8 @@ form.newsletter {
                 position: absolute;
                 width: 35px;
                 height: 35px;
-                top: 12.5%;
-                right: 6px;
+                top: 35%;
+                right: 12px;
                 &:hover {
                     cursor: pointer;
                 }
@@ -45,7 +34,7 @@ form.newsletter {
                 }
                 i {
                     margin-left: -5px;
-                    font-size: 24px;
+                    font-size: 20px;
                     color: $white;
                     transform: rotateZ(45deg);
                 }
