@@ -21,7 +21,7 @@
     <meta property="og:video" content="">
     <meta property="og:locale" content="en_US">
     <meta property="og:locale:alternate" content="fr_FR">
-    <title>@yield('title')</title>
+    <title>@yield('title') - Cci Campus</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link rel="mask-icon" href="{{ url('assets/icons/safari-pinned-tab.svg') }}" color="#5bbad5">
     <link rel="shortcut icon" href="{{ url('assets/icons/favicon.ico') }}">
@@ -34,17 +34,13 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     @vite('resources/scss/app.scss')
+    @yield('styles')
 </head>
 <body>
-
     @include('layouts.navbar')
-
     @yield('body')
-
     @include('layouts.footer')
-
     @vite('resources/js/app.js')
     @yield('scripts')
-
 </body>
 </html>
