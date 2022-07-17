@@ -4,3 +4,14 @@
 // font-family: 'Palanquin', sans-serif;
 // font-weight: 100,400.
 @import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;400&display=swap');
+
+%underlined {
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    background-position: left 0 bottom 0;
+    transition: background-size .4s;
+    background-image: linear-gradient(transparent calc(100% - 3px), $black calc(100% - 2px), $black 100%);
+    &:hover, &:active {
+        background-size: 100% 100%;
+    }
+}
