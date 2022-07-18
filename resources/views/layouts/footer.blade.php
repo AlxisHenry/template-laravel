@@ -43,29 +43,37 @@
             <div class="ml-4">
                 <ul>
                     <li class="title mb-3">Navigation</li>
-                    <li class="mb-2"><a href="">Project</a></li>
+                    <li class="mb-2"><a href="/">Home</a></li>
+                    <li class="mb-2"><a href="/project">Project</a></li>
                     <li class="mb-2"><a href="">Github</a></li>
-                    @if(Auth::check())
-                        <li class="mb-2"><a href="">Profile</a></li>
-                    @else
-                        <li class="mb-2"><a href="">Sign-in</a></li>
-                    @endif
                 </ul>
             </div>
             <div class="ml-4">
                 <ul>
                     <li class="title mb-3">Account</li>
-                    <li class="mb-2"><a href="">Project</a></li>
-                    <li class="mb-2"><a href="">Github</a></li>
-                    <li class="mb-2"><a href="">Sign-in</a></li>
+                    @if(Auth::check())
+                        <li class="mb-2"><a href="/profile">Profile</a></li>
+                        <li class="mb-2"><a href="/profile/settings">Account settings</a></li>
+                    @else
+                        <li class="mb-2"><a href="/sign-in">Sign-in</a></li>
+                        <li class="mb-2"><a href="/sign-up">Sign-up</a></li>
+                    @endif
+                    @if(Auth::check())
+                        <li class="mb-2">
+                            <form action="/auth/logout" method="POST">
+                                @csrf
+                                <button class="button_disabled" type="submit">Logout</button>
+                            </form>
+                        </li>
+                    @endif
                 </ul>
             </div>
             <div class="ml-4">
                 <ul>
                     <li class="title mb-3">Policy</li>
-                    <li class="mb-2"><a href="">Project</a></li>
-                    <li class="mb-2"><a href="">Github</a></li>
-                    <li class="mb-2"><a href="">Sign-in</a></li>
+                    <li class="mb-2"><a href="">Privacy Policy</a></li>
+                    <li class="mb-2"><a href="">Terms and conditions</a></li>
+                    <li class="mb-2"><a href="">Authors</a></li>
                 </ul>
             </div>
         </div>
