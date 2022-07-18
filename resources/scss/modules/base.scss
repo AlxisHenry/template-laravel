@@ -79,3 +79,21 @@ i:hover {
 .container {
     max-width: 1100px;
 }
+
+.user-select-none {
+    user-select: none!important;
+}
+
+.button_disabled {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: $white;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    &:hover {
+        cursor: pointer;
+    }
+}
