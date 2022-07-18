@@ -19,7 +19,7 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'username' => fake()->name(),
+            'username' => fake()->userName(),
             'email' => fake()->safeEmail(),
             'email_verified_at' => now(),
             'password' => Hash::make('password'),
