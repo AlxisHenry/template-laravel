@@ -21,4 +21,12 @@
 
 @section('scripts')
 
+    @vite('resources/js/components/auth.js')
+
+    @if($auth_type === 'sign-in')
+        @vite('resources/js/components/auth/auth.sign-in.js')
+    @elseif($auth_type === "sign-up")
+        @vite('resources/js/components/auth/auth.sign-up.js')
+    @endif
+
 @endsection
