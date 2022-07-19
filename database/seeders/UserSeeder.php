@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use App\Models\User;
 
 class UserSeeder extends Seeder
 {
@@ -16,16 +17,24 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'username' =>  Str::random(15),
-            'email' =>  Str::random(10) . '@gmail.com',
+
+        # Generate random user (only with Seeder)
+        /* User::create([
+            'username' =>  Str::random(25),
+            'email' =>  Str::random(49) . '@gmail.com',
             'password' => Hash::make('password'),
-            'first_name' =>  Str::random(5),
-            'last_name' =>  Str::random(5),
-            'zip' => '67000',
-            'city' => Str::random(5),
-            'address' => Str::random(10),
-            'country' => ucfirst(Str::random(5)),
-        ]);
+            'first_name' =>  Str::random(12),
+            'last_name' =>  Str::random(12),
+            'country_code' => rand(10000, 99999),
+            'city' => Str::random(10),
+            'address' => Str::random(30),
+            'country' => Str::random(10),
+           ]); */
+
+        # Generate multiples randoms users (using factories)
+        # This command will use the following file : database\factories\UsersFactory.php
+        # Give in parameter to the method count the number of creation wanted
+        User::factory()->count(60)->create();
+
     }
 }

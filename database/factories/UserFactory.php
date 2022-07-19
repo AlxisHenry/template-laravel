@@ -18,11 +18,13 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        # In this factory we use Faker ( a PHP library that generate fake data)
+
         return [
-            'username' => fake()->userName(),
-            'email' => fake()->safeEmail(),
+            'username' => fake()->unique()->userName(),
+            'email' => fake()->unique()->email(),
             'email_verified_at' => now(),
-            'password' => Hash::make('password'),
+            'password' => fake()->password(8, 255),
             'first_name' => fake()->firstName(),
             'last_name' => fake()->lastName(),
             'country_code' => fake()->countryCode(),
@@ -31,6 +33,7 @@ class UserFactory extends Factory
             'country' => fake()->country(),
             'remember_token' => Str::random(10),
         ];
+
     }
 
     /**
