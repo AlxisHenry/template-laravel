@@ -6,6 +6,9 @@ export default defineConfig({
         laravel([
             'resources/scss/app.scss',
             'resources/js/app.js',
+            'resources/js/components/navbar.js',
+            'resources/js/components/auth.js',
+            'resources/js/components/auth/auth.sign-up.js'
         ]),
         {
             name: 'blade',
