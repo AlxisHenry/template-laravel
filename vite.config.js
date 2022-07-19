@@ -8,6 +8,7 @@ export default defineConfig({
             'resources/js/app.js',
             'resources/js/components/navbar.js',
             'resources/js/components/auth.js',
+            'resources/js/components/auth/auth.sign-in.js',
             'resources/js/components/auth/auth.sign-up.js'
         ]),
         {
