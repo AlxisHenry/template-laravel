@@ -15,6 +15,15 @@ use Illuminate\Http\RedirectResponse;
 
 class AuthController extends Controller
 {
+    public function __construct()
+    {
+        # AuthController will be use AuthSystem middleware for all routes where he's called
+        $this->middleware('auth.system');
+    }
+
+    /*
+     * @Route("/sign-in")
+     * */
     public function SignIn(): Factory|View|Application
     {
         return view('auth', [
@@ -22,12 +31,25 @@ class AuthController extends Controller
         ]);
     }
 
+    /*
+     * @Route("/sign-up")
+     * */
     public function SignUp(): Factory|View|Application
     {
         return view('auth', [
             'auth_type' => 'sign-up',
-            'password_min_val' => $this->GetPasswordMinVal()
+            'password_min_val' => $this->passwordMinLength()
         ]);
+    }
+
+
+    /*
+     * Globals functions for Auth system
+     * */
+
+    public function passwordMinLength():int {
+        # Get the min length of password in register form
+        return 8;
     }
 
     public function LoginUser(array $user): Redirector|RedirectResponse|Application
@@ -43,10 +65,6 @@ class AuthController extends Controller
             ->with('auth_failed', true);
     }
 
-    public function GetPasswordMinVal():int {
-        return 8;
-    }
-
     public function RegisterUser(Request $request): Redirector|Application|RedirectResponse
     {
 
@@ -57,7 +75,7 @@ class AuthController extends Controller
         $validate = Validator::make($request->all(), [
             'username' => 'required|between:2,25|unique:users,username|alpha',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|between:'. $this->GetPasswordMinVal() .',255'
+            'password' => 'required|between:'. $this->passwordMinLength() .',255'
         ],
         [
             'username.alpha' => 'Whitespace not allowed'
@@ -96,25 +114,21 @@ class AuthController extends Controller
             ->with('action', 'logout');
     }
 
+    /*
+     * @Route("/auth/{type}")
+     * */
     public function Auth(string $type, Request $request): Redirector|Application|RedirectResponse
     {
-
-        $types = ['sign-in', 'sign-up', 'logout'];
-
-        if (in_array($type, $types)) {
-            return match ($type) {
-                'sign-in' => $this->LoginUser([
-                    'username' => $request->input('username'),
-                    'password' => $request->input('password')
-                ]),
-                'sign-up' => $this->RegisterUser($request),
-                'logout' => $this->LogoutUser()
-            };
-        }
-
-        return redirect()
-            ->back()
-            ->with('auth_url_error', true);
-
+        # Check if parameter {type} is valid
+        return match ($type) {
+            'sign-in' => $this->LoginUser([
+                'username' => $request->input('username'),
+                'password' => $request->input('password')
+            ]),
+            'sign-up' => $this->RegisterUser($request),
+            'logout' => $this->LogoutUser(),
+            # If not, the user is redirected with an error
+            default => redirect()->back()->with('auth_parameters_error', true)
+        };
     }
 }
